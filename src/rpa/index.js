@@ -4,7 +4,12 @@ const submarino = require("./Submarino");
 
 async function start (Pesquisa) {
     console.log(Pesquisa)
-    const browser = await puppeteer.launch({headless:true});
+    const browser = await puppeteer.launch({
+      'args' : [
+        '--no-sandbox',
+        '--disable-setuid-sandbox'
+      ]
+    });
     console.log("a1")
     const listaAmericanas = await americanas(browser, Pesquisa)
     console.log("a2")

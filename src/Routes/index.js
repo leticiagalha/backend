@@ -10,6 +10,7 @@ router.get("/:produto",async(req,res) => {
         console.log("fim") 
         res.status(200).send({mensagem:retorno })
     }catch(erro){
+        console.log(erro)
         res.status(400).send({error:erro })
     }
 })
