@@ -4,7 +4,7 @@ const submarino = require("./Submarino");
 
 async function start (Pesquisa) {
     console.log(Pesquisa)
-    const browser = await puppeteer.launch({headless:false});
+    const browser = await puppeteer.launch({headless:true});
 
     const listaAmericanas = await americanas(browser, Pesquisa)
     const listaSubmarino = await submarino(browser, Pesquisa)
