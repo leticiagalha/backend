@@ -1,8 +1,11 @@
 async function americanas(browser, Pesquisa){
 
-
+console.log("americanas1")
     const page = await browser.newPage()
+    console.log("americanas2")
+
     await page.goto("https://www.americanas.com.br/busca/" + Pesquisa)
+    console.log("americanas3")
 
 
     const lista = await page.evaluate(()=>{
@@ -24,7 +27,7 @@ async function americanas(browser, Pesquisa){
        return objetos
 
     })
-    
+    console.log("americanas4")
     return lista
 
 }

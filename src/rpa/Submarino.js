@@ -1,8 +1,12 @@
 async function submarino(browser, Pesquisa){
 
+   console.log("submarino1")
 
     const page = await browser.newPage()
+    console.log("submarino2")
+
     await page.goto("https://www.submarino.com.br/busca/" + Pesquisa)
+    console.log("submarino3")
 
 
     const lista = await page.evaluate(()=>{
@@ -24,7 +28,7 @@ async function submarino(browser, Pesquisa){
        return objetos
 
     })
-    
+    console.log("submarino4")
     return lista
 
 }
