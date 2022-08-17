@@ -8,7 +8,8 @@ async function start (Pesquisa) {
       'args' : [
         '--no-sandbox',
         '--disable-setuid-sandbox'
-      ]
+      ],
+      headless:false
     });
     console.log("a1")
     const listaAmericanas = await americanas(browser, Pesquisa)
